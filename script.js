@@ -9,12 +9,12 @@ request.send();
 // from the server 200
 request.onload=function(){
 	var data=JSON.parse(request.response);
-	console.log(data);
+	for(var i=0;i<data.length;i++){
+	 	console.log(`name: ${data[i].name} Region:${data[i].region}  SubRegion:${data[i].subregion} Population:${data[i].population}`)
+	 }
+	
+}
 	
 
-	for(var i=0; i<10;i++){
-		console.log(`flag:${data[i].flag}`)
-	}
-// 	
-
+	
 
